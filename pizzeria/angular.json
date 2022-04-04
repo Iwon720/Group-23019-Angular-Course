@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pizzeria": {
+    "Pizzeria": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pizzeria:build:production"
+              "browserTarget": "Pizzeria:build:production"
             },
             "development": {
-              "browserTarget": "pizzeria:build:development"
+              "browserTarget": "Pizzeria:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pizzeria:build"
+            "browserTarget": "Pizzeria:build"
           }
         },
         "test": {
@@ -107,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "pizzeria"
+  "defaultProject": "Pizzeria"
 }

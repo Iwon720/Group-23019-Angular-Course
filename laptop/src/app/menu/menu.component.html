@@ -1,23 +1,25 @@
-<div class="container" fxLayout="column" fxLayoutGap="10px">
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
   <div fxFlex>
     <div>
-      <h3>Menu</h3>
+      <h3>Меню</h3>
       <hr>
     </div>
   </div>
 
-  <mat-list fxFlex>
-    <mat-grid-list cols="2" rowHeight="3:2">
-      <mat-grid-tile *ngFor="let laptop of laptops" (click)="onSelect(laptop)">
-        <img class="image" src={{laptop.image}} alt={{laptop.name}}>
+  <div fxFlex *ngIf="pizzas">
+    <mat-grid-list cols="3" rowHeight="3:2">
+      <mat-grid-tile *ngFor="let pizza of pizzas" [routerLink]="['/pizza-detail', pizza.id]" appHighlight>
+        <img class="image" src="{{BaseURL + pizza.image}}" alt={{pizza.name}}>
         <mat-grid-tile-footer>
-          <h1 matLine>{{laptop.name}}</h1>
+          <h1>{{pizza.name | uppercase}}</h1>
         </mat-grid-tile-footer>
       </mat-grid-tile>
     </mat-grid-list>
-  </mat-list>
+  </div>
 
-  <app-laptop-detail [laptop] = "selectedLaptop"></app-laptop-detail>
+  <app-spinner [hiddenData]="pizzas"></app-spinner>
 
 </div>
-
