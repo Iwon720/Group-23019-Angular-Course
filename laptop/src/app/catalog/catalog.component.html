@@ -1,0 +1,25 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
+  <div fxFlex>
+    <div>
+      <h3>Меню</h3>
+      <hr>
+    </div>
+  </div>
+
+  <div fxFlex *ngIf="laptops">
+    <mat-grid-list cols="3" rowHeight="3:2">
+      <mat-grid-tile *ngFor="let laptop of laptops" [routerLink]="['/laptop-info', laptop.id]" appHighlight>
+        <img class="image" src="{{BaseURL + laptop.image}}" alt={{laptop.name}}>
+        <mat-grid-tile-footer>
+          <h1>{{laptop.name | uppercase}}</h1>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <app-spinner [hiddenData]="laptops"></app-spinner>
+
+</div>

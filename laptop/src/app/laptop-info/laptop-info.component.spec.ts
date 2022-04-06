@@ -1,20 +1,20 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {LaptopInfoComponent} from './laptop-info.component';
+import {PizzaDetailComponent} from './laptop-info.component';
 
-describe('LaptopInfoComponent', () => {
-  let component: LaptopInfoComponent;
-  let fixture: ComponentFixture<LaptopInfoComponent>;
+describe('PizzaDetailComponent', () => {
+  let component: PizzaDetailComponent;
+  let fixture: ComponentFixture<PizzaDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LaptopInfoComponent]
+      declarations: [PizzaDetailComponent]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LaptopInfoComponent);
+    fixture = TestBed.createComponent(PizzaDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,9 +1,9 @@
 import {Routes} from "@angular/router";
 import {HomeComponent} from "../home/home.component";
-import {MenuComponent} from "../menu/menu.component";
+import {CatalogComponent} from "../catalog/catalog.component";
 import {ContactComponent} from "../contact/contact.component";
 import {AboutComponent} from "../about/about.component";
-import {PizzaDetailComponent} from "../pizza-detail/pizza-detail.component";
+import {LaptopInfoComponent} from "../laptop-info/laptop-info.component";
 import {PlaceOrderComponent} from "../place-order/place-order.component";
 
 export const routes: Routes = [
@@ -16,12 +16,12 @@ export const routes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'menu',
-    component: MenuComponent
+    path: 'catalog',
+    component: CatalogComponent
   },
   {
-    path: 'pizza-detail/:id',
-    component: PizzaDetailComponent
+    path: 'laptop-info/:id',
+    component: LaptopInfoComponent
   },
   {
     path: 'contact',

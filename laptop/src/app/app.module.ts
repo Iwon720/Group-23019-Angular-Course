@@ -5,16 +5,16 @@ import {AppComponent} from './app.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {MenuComponent} from './menu/menu.component';
+import {CatalogComponent} from './catalog/catalog.component';
 import {MatListModule} from "@angular/material/list";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
-import {PizzaDetailComponent} from './pizza-detail/pizza-detail.component';
+import {LaptopInfoComponent} from './laptop-info/laptop-info.component';
 import '@angular/common/locales/global/ru';
 import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
-import {PizzaService} from "./services/pizza.service";
+import {LaptopService} from "./services/laptop.service";
 import {HomeComponent} from './home/home.component';
 import {AboutComponent} from './about/about.component';
 import {ContactComponent} from './contact/contact.component';
@@ -40,12 +40,13 @@ import {PlaceOrderComponent} from './place-order/place-order.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import {NgxStarRatingModule} from "ngx-star-rating";
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
-    PizzaDetailComponent,
+    CatalogComponent,
+    LaptopInfoComponent,
     HeaderComponent,
     FooterComponent,
     HomeComponent,
@@ -60,32 +61,33 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     SpinnerComponent,
     ToolbarComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    FlexLayoutModule,
-    MatListModule,
-    MatGridListModule,
-    MatCardModule,
-    MatButtonModule,
-    MatDialogModule,
-    FormsModule,
-    MatSlideToggleModule,
-    MatSelectModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    MatCheckboxModule,
-    MatProgressSpinnerModule,
-    MatSliderModule,
-    HttpClientModule,
-    MatTableModule,
-    MatIconModule,
-    MatBadgeModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        FlexLayoutModule,
+        MatListModule,
+        MatGridListModule,
+        MatCardModule,
+        MatButtonModule,
+        MatDialogModule,
+        FormsModule,
+        MatSlideToggleModule,
+        MatSelectModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        MatCheckboxModule,
+        MatProgressSpinnerModule,
+        MatSliderModule,
+        HttpClientModule,
+        MatTableModule,
+        MatIconModule,
+        MatBadgeModule,
+        NgxStarRatingModule
+    ],
   providers: [
-    PizzaService,
+    LaptopService,
     {
       provide: 'BaseURL',
       useValue: baseURL

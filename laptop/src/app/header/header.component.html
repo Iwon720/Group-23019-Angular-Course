@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+  <span><img class="image" src="{{BaseURL}}images/logo.png" height=30 width=90 alt="Pizzeria"></span>
+  <a mat-button routerLink='/home' routerLinkActive='active'><span class="fa fa-home fa-lg"></span> Главная</a>
+  <a mat-button routerLink='/about' routerLinkActive='active'><span class="fa fa-info fa-lg"></span> О магазине</a>
+  <a mat-button routerLink='/catalog' routerLinkActive='active'><span class="fa fa-list fa-lg"></span> Каталог</a>
+  <a mat-button routerLink='/contact' routerLinkActive='active'><span class="fa fa-address-card fa-lg"></span> Контакты</a>
+
+  <span class="flex-spacer"></span>
+  <a mat-button (click)="openOrderForm()">Корзина
+    <mat-icon matBadge="{{laptopService.orderedLaptops.length}}" matBadgeColor="warn">shopping_cart</mat-icon>
+  </a>
+
+</mat-toolbar>
+
+<div class="container jumbotron"
+     fxLayout="row"
+     fxLayout.sm="column"
+     fxLayout.xs="column"
+     fxLayoutAlign.xs="start center"
+     fxLayoutAlign.sm="start center"
+     fxLayoutAlign.gt-sm="center center"
+     fxLayoutGap="10px">
+
+  <div fxFlex fxFlex.gt-sm="50%">
+    <h1>Магазин ноутбуков</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac ultrices leo. Ut at metus et sapien scelerisque rutrum. Morbi.</p>
+  </div>
+  <div fxFlex fxFlex.gt-sm="20%">
+    <img class="image" src="{{BaseURL}}images/logo.png" alt="Logo">
+  </div>
+  <div fxFlex></div>
+</div>
